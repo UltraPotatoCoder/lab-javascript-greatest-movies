@@ -1,0 +1,44 @@
+= Iteration 5 =
+
+- On Iteration 5 we use the .slice() method to return selected
+elements in an array, as a new array.
+
+- We use the .sort() method to sort in a specific way
+
+-- The 'return 1' and 'return -1' are used as return values
+in the sorting callback function provided to the sort() method
+to determine the sorting order of the elements.
+
+-- If the comparison function returns a positive number (ex: 1)
+it means the first element should come after the second element
+in the sorted order.
+
+-- If the comparison function returns a negative number (ex: -1)
+it means the first element should come before the second element
+in the sorted order.
+
+-- If the comparison function returns zero, it means the elements
+are considered equal in terms of sorting, and their relative
+order remains unchanged.
+
+- That's when the return a.title.localeCompare(b.title);
+comes in: if the year is the same, then compare it by title.
+
+
+= Iteration 6 =
+
+- First we think of sorting the array of movies by creating
+a new array with the .slice() and the .sort() methods.
+
+- In the sort method you pass the a and b parameters
+and make them compare eachother with the localeCompare().
+
+- After having your new array sorted, we extract only the 
+first 20 titles with .slice(0, 20);
+
+- In the end we want to extract only the titles of the movies
+using the .map() method: 
+ ->   const titles = first20Titles.map(movie => movie.title);
+
+ - Then we return the final value of titles, which
+ should be an array.
